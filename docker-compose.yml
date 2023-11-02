@@ -1,0 +1,49 @@
+version: '3'
+
+services:
+  library_db:
+    image: postgres:14.5
+    container_name: library_db
+    environment:
+      POSTGRES_DB: YAGLO_215
+      POSTGRES_USER: YAGLO_215
+      POSTGRES_PASSWORD: YAGLO_215
+    volumes:
+      - ./docker/db/scripts/library:/docker-entrypoint-initdb.d/
+      - library_db_data:/bitnami/postgresql
+    ports:
+      - "5432:5432"
+
+  station_db:
+    image: postgres:14.5
+    container_name: station_db
+    environment:
+      POSTGRES_DB: YAGLO_215
+      POSTGRES_USER: YAGLO_215
+      POSTGRES_PASSWORD: YAGLO_215
+    volumes:
+      - ./docker/db/scripts/station:/docker-entrypoint-initdb.d/
+      - station_db_data:/bitnami/postgresql
+    ports:
+      - "5433:5432"
+
+  station_personells_db:
+    image: postgres:14.5
+    container_name: station_personells_db
+    environment:
+      POSTGRES_DB: YAGLO_215
+      POSTGRES_USER: YAGLO_215
+      POSTGRES_PASSWORD: YAGLO_215
+    volumes:
+      - ./docker/db/scripts/station_personells:/docker-entrypoint-initdb.d/
+      - station_personells_db:/bitnami/postgresql
+    ports:
+      - "5434:5432"
+
+volumes:
+  library_db_data:
+    driver: local
+  station_db_data:
+    driver: local
+  station_personells_db:
+    driver: local
