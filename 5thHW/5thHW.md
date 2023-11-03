@@ -4,21 +4,27 @@
 1. Reader
 
 ![img.png](img.png)
+
 2. Publisher
 
 ![img_1.png](img_1.png)
+
 3. Book copies (Copy table)
 
 ![img_2.png](img_2.png)
+
 4. Category
 
 ![img_3.png](img_3.png)
+
 5. Borrowing
 
 ![img_11.png](img_11.png)
+
 6. BookCategory
 
 ![img_9.png](img_9.png)
+
 7. Book
 
 ![img_6.png](img_6.png)
