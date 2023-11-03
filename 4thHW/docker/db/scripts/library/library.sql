@@ -29,7 +29,8 @@ CREATE TABLE IF NOT EXISTS "Category" (
 );
 
 CREATE TABLE IF NOT EXISTS "Copy" (
-  "copy_number" integer PRIMARY KEY,
+  "id" integer primary key,
+  "copy_number" integer,
   "book_isbn" integer,
   "shelf_position" integer
 );
@@ -53,7 +54,7 @@ ALTER TABLE "Copy" ADD FOREIGN KEY ("book_isbn") REFERENCES "Book" ("isbn");
 
 ALTER TABLE "Borrowing" ADD FOREIGN KEY ("reader_nr") REFERENCES "Reader" ("id");
 
-ALTER TABLE "Borrowing" ADD FOREIGN KEY ("book_copy") REFERENCES "Copy" ("copy_number");
+ALTER TABLE "Borrowing" ADD FOREIGN KEY ("book_copy") REFERENCES "Copy" ("id");
 
 ALTER TABLE "BookCategory" ADD FOREIGN KEY ("category_id") REFERENCES "Category" ("id");
 
