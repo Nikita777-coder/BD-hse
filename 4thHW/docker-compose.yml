@@ -5,8 +5,8 @@ services:
     image: postgres:14.5
     container_name: library_db
     environment:
-      POSTGRES_DB: YAGLO_215
-      POSTGRES_USER: YAGLO_215
+      POSTGRES_DB: yaglo_215
+      POSTGRES_USER: yaglo_215
       POSTGRES_PASSWORD: YAGLO_215
     volumes:
       - ./docker/db/scripts/library:/docker-entrypoint-initdb.d/
@@ -18,8 +18,8 @@ services:
     image: postgres:14.5
     container_name: station_db
     environment:
-      POSTGRES_DB: YAGLO_215
-      POSTGRES_USER: YAGLO_215
+      POSTGRES_DB: yaglo_215
+      POSTGRES_USER: yaglo_215
       POSTGRES_PASSWORD: YAGLO_215
     volumes:
       - ./docker/db/scripts/station:/docker-entrypoint-initdb.d/
@@ -31,8 +31,8 @@ services:
     image: postgres:14.5
     container_name: station_personells_db
     environment:
-      POSTGRES_DB: YAGLO_215
-      POSTGRES_USER: YAGLO_215
+      POSTGRES_DB: yaglo_215
+      POSTGRES_USER: yaglo_215
       POSTGRES_PASSWORD: YAGLO_215
     volumes:
       - ./docker/db/scripts/station_personells:/docker-entrypoint-initdb.d/

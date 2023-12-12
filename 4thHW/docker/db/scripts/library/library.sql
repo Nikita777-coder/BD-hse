@@ -1,5 +1,3 @@
-\c YAGLO_215;
-
 CREATE TABLE IF NOT EXISTS "Reader" (
   "id" integer PRIMARY KEY,
   "last_name" varchar,
@@ -25,7 +23,8 @@ CREATE TABLE IF NOT EXISTS "Publisher" (
 
 CREATE TABLE IF NOT EXISTS "Category" (
   "id" integer PRIMARY KEY,
-  "name" varchar
+  "name" varchar,
+  "parent_cat" integer
 );
 
 CREATE TABLE IF NOT EXISTS "Copy" (
